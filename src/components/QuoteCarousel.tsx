@@ -13,13 +13,15 @@ export function QuoteCarousel() {
   }, [quote]);
 
   return (
-    <div className="fixed top-4 right-4 w-full max-w-sm transform transition-all duration-500 ease-in-out">
-      <div className={`bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-      }`}>
+    <div className="fixed bottom-4 right-4 w-full max-w-xs sm:max-w-sm lg:max-w-md transform transition-all duration-500 ease-in-out">
+      <div
+        className={`bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-xl ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+        }`}
+      >
         <Quote className="absolute -top-3 -left-3 w-8 h-8 text-blue-500 bg-white dark:bg-gray-800 rounded-full p-1" />
         <blockquote className="relative">
-          <p className="text-lg font-medium text-gray-900 dark:text-white leading-relaxed">
+          <p className="text-base sm:text-lg font-medium text-gray-900 dark:text-white leading-relaxed">
             "{quote.text}"
           </p>
           <footer className="mt-3">

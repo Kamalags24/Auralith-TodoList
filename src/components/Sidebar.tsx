@@ -10,6 +10,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onToggle }: SidebarProps) {
   return (
     <>
+    {/* Bouton d'ouverture/fermeture du menu */}
       <button
         onClick={onToggle}
         className="fixed top-4 left-4 z-50 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
@@ -18,6 +19,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
+      {/* Menu de navigation */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 shadow-xl transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -25,6 +27,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
       >
         <Container className="py-6">
           <nav className="space-y-6">
+            {/* Statistiques */}
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <BarChart2 className="w-5 h-5" />
